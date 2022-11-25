@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html>
+	<!DOCTYPE html>
+<html lang="es">
 <head>
 		<meta charset="utf-8">
 	
 </head>
 <body>
 		<content>
-		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
 		  <div class="carousel-inner">
 		    <div class="carousel-item active">
-		      <img class="d-block w-100" src="img/sld1.jpg" alt="First slide" height="550px">
+		      <img class="d-block w-100" src="img/sld1.jpg" alt="First slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img class="d-block w-100" src="img/sld2.jpg" alt="Second slide" height="550px">
+		      <img class="d-block w-100" src="img/sld2.jpg" alt="Second slide">
 		    </div>
 		    <div class="carousel-item">
-		      <img class="d-block w-100" src="img/sld3.jpg" alt="Third slide" height="550px">
+		      <img class="d-block w-100" src="img/sld3.jpg" alt="Third slide">
 		    </div>
 		  </div>
 		  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

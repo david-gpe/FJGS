@@ -1,16 +1,54 @@
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	font-family: 'calibri'
+	margin-top 0px;
 }
 
+.dropdown-menu div{
+	background: #24303c;
+	width: 300px;
+	height: 150px; 
+	overflow-y: scroll;
+}
+/*COLOCACION DE IMAGEN PARA EL FONDO*/
 body{
 	background-image: url("../img/fondo.jpg"); 
 }
+/*NO recuerdo donde use esto*/
+.item {
+      display: block;
+      width: 100%;
+      height: 200px;
+}
+.item img {
+      height: 100%;
+      width: 100%;
+}
+/*TAMAÑO DE IMAGEN DEL CARROUSEL*/
+.carousel-inner{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+	height: 550px;
+}
+/*ESTILO VENTNA MODAL*/
+.modal-content{
+			background: #24303c;
+			}
+		.modal-content h2{
+			color: white;
+			text-align: center;
+			}
+		.modal-content h4{
+			color: white;
+			}
 
+/*FORMULARIO DE REGISTRO*/
 .form-register {
-	width: 400px;
+	width: 500px;
 	background: #24303c;
 	padding: 30px;
 	margin: auto;
@@ -20,13 +58,10 @@ body{
 	color: white; 
 	box-shadow: 7px 13px 37px #000; 
 }
-
 .form-register label{
 	color: white;
 	font-size: 20;
 }
-
-
 .form-register i{
 	color: white;
 	align-items: center;
@@ -45,8 +80,30 @@ body{
 	color: white;
 	text-align: center;
 }
-
-
+.form-register p{
+	height: 40 px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 40px;
+	color: white;
+}
+.form-register a:hover {
+	color: white; 
+	text-decoration: none;
+}
+.form-register .botons{
+	width: 100%;
+	background: #1f53c5;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin: 16px 0;
+	font-size: 16px; 
+}
+.notItemOne option:first-child{
+	display: none;
+}
+/*PUEDEN SER USADOS*/
 .controls {
 	width: 100%;
 	background: #24303c;
@@ -58,121 +115,124 @@ body{
 	font-size: 18px;
 	color: white;
 }
-
 .controls::placeholder
 {
-     Color:white
+     color:white
+}
+/**TABLA DE USUARIOS, DIRECTOR*/
+table{
+	border-collapse: collapse;
+	padding: 0px;
+	margin-top: 0px;
+}
+table tr{
+	padding: 10px;
+	margin-top: 10px;
+}
+table th{
+	padding: 10px;
+	margin-top: 10px;
+}
+table td{
+	padding: 10px;
+	margin-top: 10px;
+}
+.link_edit{
+	color: #0ca4ce;
+
+}
+.link_delete{
+	color: #f26b6b;
 }
 
-.form-register p{
-	height: 40 px;
-	text-align: center;
-	font-size: 18px;
-	line-height: 40px;
-	color: white;
-
+/*Buscador*/
+.form_search{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	float: right;
+	background: initial;
+	padding: 10px;
+	border-radius: 10px;
 }
 
-.form-register a:hover {
-	color: white; 
-	text-decoration: none;
+.form_search .btn_search{
+	background: #24303c;
+	color: #FFF;
+	padding: 0 20px;
+	border: 0;
+	cursor: pointer;
+	margin-left: 10px; 
 }
 
-.form-register .botons{
-	width: 100%;
-	background: #1f53c5;
-	border: none;
-	padding: 12px;
-	color: white;
-	margin: 16px 0;
-	font-size: 16px; 
-}
 
+/*FOOTER*/
 footer{
 	margin-top: 100px;
 	width: 100%;
 	background: #24303c;
 	color: white; 
-	
 }
-
-
 .container-footer-all{
 	width: 100%;
-	max-width: 1000px;
+	max-width: 1100px;
 	margin: auto;
 }
-
 .container-body{
 	display: flex;
 	justify-content: space-between;
 	padding-top: 40px;
 	padding-left: 20px;
-
 }
-
 .colum1{
 	max-width: 334px;
 }
-
 .colum1 h1{
 	font-size: 22px;
 }
-
 .colum1 p{
 	font-size: 16px;
 	margin-top: 20px;
 }
-
 .colum2{
 	max-width: 333px;
 }
-
 .colum2 h1{
 	font-size: 22px;
 }
-
 .row{
 	margin-top: 10px;
 	display: flex;
 }
-
 .row i{
 	width: 20px;
 	height: 20px;
 	color: white;
-
 }
-
 .row a{
 	margin-left: 30px;
 	margin-top: 10px;
 }
-
 .row a:hover{
 	color: white;
 }
-
 .colum3{
 	max-width: 333px;
 }
-
 .colum3 h1{
 	font-size: 22px;
 }
-
 .row2{
 	margin-top: 20px;
 	display:flex;
 }
-
 .row2 i{
 	width: 36px;
 	height: 36px;
 	color: white;
-
 }
-
 .row2 label{
 	margin-top: 10px;
 	margin-left: 20px;
@@ -180,28 +240,25 @@ footer{
 	color: white;
 	font-size: 12px;
 }
-
 .container-footer{
 	width:100%; 
 	padding: 20px;
 	background: #101010;
 }
-
 .copy{
 	display: flex;
 	justify-content: space-between;
 	max-width: 1000px;
 	margin: auto;
 	padding: 10px;
-
 }
-
 .copy a{
 	text-decoration:none;
 	color: white;
 	font-weight: bold;
 }
 
+	/**ESCALABILIDAD DE FOOTER BODY, NAVBAR,  */
 @media screen and (max-width: 800px){
 	body{
 		max-width: 750px;
@@ -209,23 +266,47 @@ footer{
 	.navbar{
 		max-width: 750px;
 	}
-
-	.form-register{
-		max-width: 510px;
+	.table-responsive{
+		max-width: 800px;
 	}
-	.container-footer-all{
+	.table{
 		max-width: 750px;
 	}
 
+	.table .carousel-inner{
+		margin-left: auto;
+		margin-right: auto;
+		width: 510px;
+		height: 510px;
+	}
+	.table .form-register{
+		max-width: 510px;
+		height: 510px;
+	}
+	.form-register{
+		max-width: 510px;
+	}
+	.carousel-inner{
+		margin-left: auto;
+		margin-right: auto;
+		width: 600px;
+		height: 400px;
+	}
+	.container-footer-all{
+		max-width: 800px;
+	}
 	 .container-body .colum1{
-		padding: 0 10px;
+		padding: 0 10px;,
+		max-width: 260px
 	}
 	 .container-body .colum2{
 		padding: 0 10px;
+		max-width: 260px		
 	}
 	 .container-body .colum3{
 		padding: 0 10px;
-	}
+		max-width: 260px
+			}
 }
 
 @media screen and (max-width: 640px){
@@ -235,29 +316,43 @@ footer{
 	.navbar{
 		max-width: 640px;
 	}
-
+	.table-responsive{
+		max-width: 590px;
+	}
+	.table{
+		max-width: 590px;
+	}
+	.table .carousel-inner{
+		margin-left: auto;
+		margin-right: auto;
+		width: 440px;
+		height: 440px;
+	}
+	.table .form-register{
+		max-width: 440px;
+		height: 400px;
+	}	
 	.form-register{
 		max-width: 400px;
 	}
-
+	.carousel-inner{
+		margin-left: auto;
+		margin-right: auto;
+		width: 440px;
+		height: 400px;
+	}
 	 .container-footer-all{
 		max-width: 640px;
 	}
 	 .container-body .colum1{
-		padding: 10px 0;
-	}
-	 .container-body .colum1{
-		width: 100%;
 		text-align: center;
 		margin: 10px 0;
 	}
 	 .container-body .colum2{
-		width: 100%;
 		text-align: center;
 		margin: 10px 0;
 	}
 	 .container-body .colum3{
-		width: 100%;
 		text-align: center;
 		margin: 10px 0;
 	}
@@ -270,29 +365,43 @@ footer{
 	.navbar{
 		max-width: 500px;
 	}
-
-	.form-register{
-		max-width: 260px;
-	}
-
-	 .container-footer-all{
+	.table-responsive{
 		max-width: 500px;
 	}
-	 .container-body .colum1{
-		padding: 0 0;
+	.table{
+		max-width: 450px;
+	}
+	.table .carousel-inner{
+		margin-left: auto;
+		margin-right: auto;
+		width: 300px;
+		height: 300px;
+	}
+	.table .form-register{
+		max-width: 300px;
+		height: 300px;
+	}
+	.carousel-inner{
+		margin-left: auto;
+		margin-right: auto;
+		width: 300px;
+		height: 300px;
+	}
+	.form-register{
+		max-width: 300px;
+	}
+	 .container-footer-all{
+		max-width: 450px;
 	}
 	 .container-body .colum1{
-		width: 100%;
 		text-align: center;
 		margin: 0 0;
 	}
 	 .container-body .colum2{
-		width: 100%;
 		text-align: center;
 		margin: 0 0;
 	}
 	 .container-body .colum3{
-		width: 100%;
 		text-align: center;
 		margin: 0 0;
 	}
