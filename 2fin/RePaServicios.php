@@ -4,7 +4,7 @@
 	 
 	if(isset($_POST['selTU']))
     {
-    	$selTU=$_POST['selTU'];
+    	$selTU=$_POST['selTU']; 
     }
 ?>
 <!DOCTYPE html>
@@ -36,7 +36,7 @@
 			  				</li>
 						<input type="hidden" id="matri" value="<?php echo $m?>">
 
-		  			    <?php include "../menunoti.php"; ?>
+		  			    
 
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> 
@@ -62,7 +62,7 @@
 							<?php 
                      			while($datos = mysqli_fetch_array($query)){
                     		?>
-                        		<option value="<?php echo $datos['Nombre_Servicio']?>"> <?php echo $datos['Nombre_Servicio']?> </option>
+                        		<option value="<?php echo $datos['NombreServicio']?>"> <?php echo $datos['NombreServicio']?> </option>
                     		<?php
                         		}
                     		?> 
@@ -119,9 +119,9 @@
 						while ($data=mysqli_fetch_array($query)) {
 					?>
 					<tr>
-						<td><?php echo $data["Nombre_Servicio"]; ?> </td>
+						<td><?php echo $data["NombreServicio"]; ?> </td>
 						<td><?php echo $data["Monto"]; ?> </td>
-						<td><?php $vr= date("d-m-Y", strtotime($data["fecha"])); echo $vr; ?> </td>
+						<td><?php $vr= date("d-m-Y", strtotime($data["Fecha"])); echo $vr; ?> </td>
 							
 					</tr>
 				<?php

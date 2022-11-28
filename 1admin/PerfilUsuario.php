@@ -39,37 +39,9 @@
 		  			    	<i class="fas fa-search"></i><strong>Gestionar</strong></a>
 		  			    </li>
 
+						<?php include "../menunoti.php"; ?>
+
 		  			   <input type="hidden" id="matri" value="<?php echo $m?>">
-
-		  			    <?php
-		  			    
-						$not = mysqli_query($conexion,"SELECT * FROM Notificaciones WHERE 
-							Matricula ='$m' AND Estado = 0 AND Fecha < '$fecha_actual'");
-							$cuantas = mysqli_num_rows($not);
-						?>
-
-		  			    <li class="nav-item dropdown">
-		  			    	<a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-envelope-open"></i></a>
-		  			    	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							          <li class="dropdown-item">Tienes <?php echo $cuantas; ?> notificaciones</li>
-							          <li>
-							          	<ul>
-							          		<?php
-							          			while ($no = mysqli_fetch_array($not)) {
-							          			?>
-							          			<tr>
-							          				<a><i class="fa fa-users"></i><?php echo $no['Matricula'] ?> <?php echo $no['Causa']; ?> el dia <?php echo $no['Fecha'];?>
-							          				</a>
-							          			</tr>
-							          			<?php
-							          		}
-							          		?>
-							          	</ul>
-
-							          </li>
-							          <input class="botons form-control" type="submit" id="modificarnotificacion" value="Marcar como leidas">
-							        </ul>
-							</li>
 
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?>	<?php echo $_SESSION['usuario'] ?> </strong></a>

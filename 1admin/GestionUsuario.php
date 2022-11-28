@@ -67,9 +67,10 @@ $m = $_SESSION['matUs'];
  						<li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link" href="ExpedienteUs.php" id="navbarDropdownMenuLink"><i class="fas fa-search"></i><strong>Historial</strong></a>
 		  			    </li>
+						<?php include "../menunoti.php"; ?>
+		  			    
 		  			    <input type="hidden" id="matri" value="<?php echo $m?>">
 
-		  			    <?php include "../menunoti.php"; ?>
 		  			   
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> <?php echo $_SESSION['usuario'] ?> </strong></a>
@@ -84,8 +85,7 @@ $m = $_SESSION['matUs'];
 		  </div>
 		</nav>
 
-
-			<!--            	 formulario de busqueday				
+				
 			 <form class="form-register">
 				<div class="title">
 					<h4><i class="fas fa-user"></i> Gestión de Información</h4>
@@ -114,7 +114,7 @@ $m = $_SESSION['matUs'];
 					</div>
 				<input class="botons " type="submit" value="Buscar">
 			</form>
-			   -->      
+     
 
 			            	<!-- tabla de busqueda-->
 			<form class="form-register">

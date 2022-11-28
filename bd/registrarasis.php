@@ -26,7 +26,7 @@ include "cn.php";
              $connot = "INSERT INTO Notificaciones(Matricula, Causa, Fecha) VALUES('$mat','Ha sido registrado una asistencia', CURDATE())"; 
                     $resconnot = mysqli_query($conexion,$connot);
                     if ($resconnot=true) {
-                        header('Location: ../1admin/RegistroAsisUs.php');
+                        //header('Location: ../1admin/RegistroAsisUs.php');
                     }
         }
     }    

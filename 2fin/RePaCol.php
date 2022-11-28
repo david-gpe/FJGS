@@ -1,5 +1,5 @@
 <?php include "../bd/cn.php";
-
+ 
 	$query= mysqli_query($conexion,$periodo);
  
 	if(isset($_POST['selTU']))
@@ -34,9 +34,11 @@
 			  				<li class="nav-item active dropdown">
 		  						<a class="nav-item nav-link active" href="indexfin.php" id="navbarDropdownMenuLink"><i class="fas fa-home"></i> <strong>Inicio</strong></a>
 			  				</li>
+		  			    <?php include "../menunoti.php"; ?>
+
 			  				<input type="hidden" id="matri" value="<?php echo $m?>">
 
-		  			    <?php include "../menunoti.php"; ?>
+		  			    
 		  			    
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> <?php echo $_SESSION['usuario'] ?> </strong></a>
@@ -49,7 +51,7 @@
 		   				</ul>
 		  			</div>
 		 	 	</div>
-		</nav>
+		</nav> 
 
 		<form class="form-register" action="../bd/registrocolegiaturas.php" method="POST">
 			<div class="title">
@@ -58,10 +60,6 @@
 					<div class="col-md-12 mb-3" >
 					 	<label for="idalum">Matricula del Alumno:</label>
 					 	<input class="form-control" type="text" name="idalum" id="idalum" placeholder="ALUMPRI3" required>
-					</div>
-					<div class="col-md-12 mb-3" >
-					 	<label for="idalum">Matricula del Tutor:</label>
-					 	<input class="form-control" type="text" name="idt" id="idt" placeholder="TUTPRI1" required>
 					</div>
 				</div>	
 			</div>
@@ -126,7 +124,7 @@
 					?>
 					<tr>
 						<td><?php echo $data["Matricula"]; ?> </td>
-						<td><?php echo $data["nombre"]; ?> </td>
+						<td><?php echo $data["Nombre"]; ?> </td>
 						<td><?php echo $data["ApellidoPaterno"]; ?> </td>
 						<td><?php echo $data["ApellidoMaterno"]; ?> </td>
 						<td><?php echo $data["IdColegiatura"]; ?> </td>

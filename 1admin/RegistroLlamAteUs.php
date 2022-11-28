@@ -37,9 +37,10 @@ $m = $_SESSION['matUs'];
  						<li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link" href="ExpedienteUs.php" id="navbarDropdownMenuLink"><i class="fas fa-search"></i><strong>Historial</strong></a>
 		  			    </li>	
+						<?php include "../menunoti.php"; ?>
+		  			    
 		  			    <input type="hidden" id="matri" value="<?php echo $m?>">
 
-		  			    <?php include "../menunoti.php"; ?>
 		  			    
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> <?php echo $_SESSION['usuario'] ?></strong></a>
@@ -95,11 +96,12 @@ $m = $_SESSION['matUs'];
 						<th>Nombre</th>
 						<th>Fecha</th>
 						<th>Razón</th>
-						<!--<th>Acciones</th>-->				
+						<th>Acciones</th>			
 					</tr>
 					<?php 
 					$ins="SELECT * FROM LlamaUsuario";
 					$query=mysqli_query($conexion,$ins);
+
 					$result = mysqli_num_rows($query);
 					if ($result > 0) {
 						while ($data=mysqli_fetch_array($query)) {
@@ -107,11 +109,11 @@ $m = $_SESSION['matUs'];
 					<tr>
 						<td><?php echo $data["Matricula"]; ?> </td>
 						<td><?php echo $data["Nombre"]; ?> </td>
-						<td><?php $vr= date("d-m-Y", strtotime($data["Fecha"])); echo $vr; ?> </td>
-						<td><?php echo $data["Razon"]; ?> </td>
-						<!--<td>
+						<td><?php $vr= date("d-m-Y", strtotime($data["fecha"])); echo $vr; ?> </td>
+						<td><?php echo $data["razon"]; ?> </td>
+						<td>
 							<a class="link_edit" href="" data-toggle="modal" data-target="#Editar"><i class="fas fa-edit"></i> <strong>Editar</strong></a>
-						</td>	-->
+						</td>
 					</tr>
 				<?php
 					}

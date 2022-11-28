@@ -2,7 +2,6 @@
 include "cn.php";
     
     $id = utf8_decode($_POST["idalum"]);
-    $idt = utf8_decode($_POST["idt"]);
     $mnt = utf8_decode($_POST["mnt"]);
     $fdp =$_POST["fec"];
 
@@ -41,21 +40,24 @@ include "cn.php";
         }
 
         $consultapagorealizado = "SELECT IdColegiatura FROM Colegiatura WHERE MatriculAlumno='$id' AND IdMensualidad='$selTU'";
+
+
         $query = mysqli_query($conexion,$consultapagorealizado);
             $filas = mysqli_num_rows($query);
         if ($filas == 0) {
-            $consulta2 = "INSERT INTO Colegiatura(MatriculaTutor, MatriculAlumno, IdMensualidad, Monto, FechedePago, FechadeProximoPago) VALUES ('$idt','$id','$selTU','$mnt','$fdp','$fechaproximomes')";
+            $consulta2 = "INSERT INTO Colegiatura(MatriculAlumno, IdMensualidad, Monto, FechedePago, FechadeProximoPago) VALUES ('$id','$selTU','$mnt','$fdp','$fechaproximomes')";
             $res2 = mysqli_query($conexion,$consulta2);
+
+            echo $consulta2;
+
             if ($res2=true) {
-                 $connot = "INSERT INTO Notificaciones(Matricula, Causa, Fecha) VALUES('$idt','Ha sido registrado un pago de colegiatura', CURDATE())"; 
-                    $resconnot = mysqli_query($conexion,$connot);
-                    if ($resconnot=true) {
-                     header('Location: ../2fin/RePaCol.php');
-                 }
+
+                    header('Location: ../2fin/RePaCol.php');
+                
                }   
         }else{
 
-             header('Location: ../2fin/RePaCol.php');
+             //header('Location: ../2fin/RePaCol.php');
 
         }
        

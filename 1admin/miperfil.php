@@ -42,39 +42,9 @@
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link" href="ExpedienteUs.php" id="navbarDropdownMenuLink"><i class="fas fa-search"></i><strong>Historial</strong></a>
 		  			    </li>
-						<input type="hidden" id="matri" value="<?php echo $m?>">
-
-		  			    <?php
+						<?php include "../menunoti.php"; ?>
+		  			    <input type="hidden" id="matri" value="<?php echo $m?>">
 		  			    
-						$not = mysqli_query($conexion,"SELECT * FROM Notificaciones WHERE 
-							Matricula ='$m' AND Estado = 0 AND Fecha < '$fecha_actual'");
-							$cuantas = mysqli_num_rows($not);
-						?>
-						<input type="hidden" id="num" value="<?php echo $cuantas?>">
-
-
-		  			    <li class="nav-item dropdown">
-		  			    	<a class="nav-item nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-envelope-open"></i></a>
-		  			    	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-							          <li class="dropdown-item">Tienes <?php echo $cuantas; ?> notificaciones</li>
-							          <li>
-							          	<ul>
-							          		<?php
-							          			while ($no = mysqli_fetch_array($not)) {
-							          			?>
-							          			<li>
-							          				<a><i class="fa fa-users"></i><?php echo $no['Matricula'] ?> <?php echo $no['Causa']; ?> el dia <?php echo $no['Fecha'];?>
-							          				</a>
-							          			</li>
-							          			<?php
-							          		}
-							          		?>
-							          	</ul>
-
-							          </li>
-							          <input class="botons form-control" type="submit" id="modificarnotificacion" value="Marcar como leidas">
-							        </ul>
-							</li>
 
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> <?php echo $_SESSION['usuario']?></strong></a>
@@ -82,6 +52,7 @@
 							          <a class="dropdown-item" href="ExpedienteUs.php">Mi Perfil</a>
 							          <a class="dropdown-item" href="../bd/cerrarsesion.php"><i class="fas fa-sign-in-alt"></i> <strong>Cerrar Sesión</strong></a>
 							    </div>
+						</li>
 		  			   
 		  			    
 		    </ul>
@@ -164,7 +135,7 @@
 			</table>
 		</div>
 
-					<form class="form-register">
+<!--					<form class="form-register">
 			    <div class="title">
 					<h4 class=" text-center"> Lista de Llamadas de Atención</h4>
 				</div>				
@@ -177,7 +148,7 @@
 						<th>Nombre</th>
 						<th>Fecha</th>
 						<th>Razón</th>
-						<!--<th>Acciones</th>-->				
+						<th>Acciones</th>				
 					</tr>
 					<?php 
 					$ins="SELECT * FROM LlamaUsuario WHERE Matricula='$m'";
@@ -191,9 +162,9 @@
 						<td><?php echo $data["Nombre"]; ?> </td>
 						<td><?php $vr= date("d-m-Y", strtotime($data["Fecha"])); echo $vr; ?> </td>
 						<td><?php echo $data["Razon"]; ?> </td>
-						<!--<td>
+						<td>
 							<a class="link_edit" href="" data-toggle="modal" data-target="#Editar"><i class="fas fa-edit"></i> <strong>Editar</strong></a>
-						</td>	-->
+						</td>	
 					</tr>
 				<?php
 					}
@@ -202,7 +173,7 @@
 				?>
 
 			</table>
-		</div>
+		</div>-->
 
 					
 			

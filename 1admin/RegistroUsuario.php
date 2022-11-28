@@ -78,10 +78,9 @@ $m = $_SESSION['matUs'];
 		  			    	 <li class="nav-item dropdown">
 		  			    		<a class="nav-item nav-link" href="ExpedienteUs.php" id="navbarDropdownMenuLink"><i class="fas fa-search"></i><strong>Historial</strong></a>
 		  			   		 </li>
-							 <input type="hidden" id="matri" value="<?php echo $m?>">
+							<?php include "../menunoti.php"; ?>
 
-		  			    <?php include "../menunoti.php"; ?>
-		  			    
+							 <input type="hidden" id="matri" value="<?php echo $m?>">	  			    
 			  			    <li class="nav-item dropdown">
 			  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> 
 		  			    		<?php echo $_SESSION['usuario'] ?> </strong></a>

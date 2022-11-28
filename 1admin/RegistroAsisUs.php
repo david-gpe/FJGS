@@ -35,10 +35,9 @@ $m = $_SESSION['matUs'];
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link" href="ExpedienteUs.php" id="navbarDropdownMenuLink"><i class="fas fa-search"></i><strong>Historial</strong></a>
 		  			    </li>
+						<?php include "../menunoti.php"; ?>
+		  			    
 		  			     <input type="hidden" id="matri" value="<?php echo $m?>">
-
-		  			    <?php include "../menunoti.php"; ?>
-		  			   
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> <?php echo $_SESSION['usuario'] ?></strong></a>
 		  			    		<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -94,9 +93,9 @@ $m = $_SESSION['matUs'];
 						<th>Número de Registro</th>
 						<th>Matricula</th>
 						<th>Nombre</th>
-						<th>Fecha</th>
 						<th>Entrada</th>
 						<th>Salida</th>
+						<th>Fecha</th>
 						<th>Acciones</th>
 					</tr>
 					<?php 
@@ -110,9 +109,9 @@ $m = $_SESSION['matUs'];
 						<td><?php echo $data["id"]?></td>
 						<td><?php echo $data["Matricula"]; ?> </td>
 						<td><?php echo $data["Nombre"]; ?> </td>
-						<td><?php $vr= date("d-m-Y", strtotime($data["Fecha"])); echo $vr; ?> </td>
 						<td><?php echo $data["horaEntrada"]; ?> </td>
 						<td><?php echo $data["HoraSalida"]; ?> </td>
+						<td><?php $vr= date("d-m-Y", strtotime($data["fecha"])); echo $vr; ?> </td>
 						<td>
 							<a class="link_edit" href="editarAsisUs.php?id=<?php echo $data["id"]; ?>"><i class="fas fa-edit"></i> <strong>Editar</strong></a>
 						</td>	

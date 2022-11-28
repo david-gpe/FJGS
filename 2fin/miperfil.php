@@ -35,8 +35,10 @@
 							          <a class="dropdown-item" href="RePaServicios.php">Pagos Servicios</a>
 							      </div>
 		  				</li>
-		  			   <input type="hidden" id="matri" value="<?php echo $m?>">
 		  			    <?php include "../menunoti.php"; ?>
+		  				
+		  			   <input type="hidden" id="matri" value="<?php echo $m?>">
+		  			    
 		  			    
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?> <?php echo $_SESSION['usuario'] ?></strong></a>
@@ -150,8 +152,8 @@
 					<tr>
 						<td><?php echo $data["Matricula"]; ?> </td>
 						<td><?php echo $data["Nombre"]; ?> </td>
-						<td><?php echo $data["Fecha"]; ?> </td>
-						<td><?php echo $data["Razon"]; ?> </td>
+						<td><?php echo $data["fecha"]; ?> </td>
+						<td><?php echo $data["razon"]; ?> </td>
 						<!--<td>
 							<a class="link_edit" href="" data-toggle="modal" data-target="#Editar"><i class="fas fa-edit"></i> <strong>Editar</strong></a>
 						</td>	-->

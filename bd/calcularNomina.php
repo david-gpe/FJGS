@@ -8,6 +8,7 @@ include "cn.php";
 	$ressegtotles = mysqli_fetch_array($resultadosegundostotales);
 	$seg = $ressegtotles["TotalSegundosNomina"];
 	if ($seg == 0) {
+		echo $seg;
 		echo "No se le debe a el empleado";
 	}else{
 			

@@ -48,9 +48,11 @@ $m = $_SESSION['matUs'];
 			  			    	<i class="fas fa-search"></i><strong>Gestionar</strong></a>
 			  			    </li>
 
+							<?php include "../menunoti.php"; ?>
+
 			  			    <input type="hidden" id="matri" value="<?php echo $m?>">
 
-		  			    <?php include "../menunoti.php"; ?>
+
 		  			    
 
 			  			    <li class="nav-item dropdown">
@@ -97,8 +99,8 @@ $m = $_SESSION['matUs'];
 									<tr>
 										<td><?php echo $data["Matricula"]; ?> </td>
 										<td><?php echo $data["Nombre"]; ?> </td>
-										<td><?php $vr= date("d-m-Y", strtotime($data["Fecha"])); echo $vr; ?> </td>
-										<td><?php echo $data["Razon"]; ?> </td>
+										<td><?php $vr= date("d-m-Y", strtotime($data["fecha"])); echo $vr; ?> </td>
+										<td><?php echo $data["razon"]; ?> </td>
 									</tr>
 									<?php
 										}

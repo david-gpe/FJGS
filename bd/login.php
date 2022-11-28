@@ -9,7 +9,7 @@ require 'cn.php';
 
 		    $usuarios ="SELECT tipoUsuario FROM Usuario_Tipo
 					WHERE Usuario= '$username' AND Password = '$ps' ";
-		    echo mysqli_query($conexion,$usuarios);
+	
 
 		    $res = mysqli_query($conexion,$usuarios);
 
@@ -17,12 +17,10 @@ require 'cn.php';
 		    $resma = mysqli_query($conexion,$matricula);
 		    $frm = mysqli_fetch_array($resma);
 		    $mat = $frm['Matricula'];
-
 		    $fila = mysqli_fetch_array($res);
 		    $tipo = $fila["tipoUsuario"];
 
-		    console.log("Matricula " + $mat + " Tipo usuario" + $tipo);
-    		/*$_SESSION['tpUs']=$tipo;
+     		$_SESSION['tpUs']=$tipo;
     		$_SESSION['matUs']= $mat;
 
 		    if ($tipo == "Administrador") {

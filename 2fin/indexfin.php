@@ -31,9 +31,9 @@
 							          <a class="dropdown-item" href="RePaServicios.php">Pagos Servicios</a>
 							      </div>
 		  				</li>
-		  			   <input type="hidden" id="matri" value="<?php echo $m?>">
-
 		  			    <?php include "../menunoti.php"; ?>
+		  				
+		  			   <input type="hidden" id="matri" value="<?php echo $m?>">
 		  			    
 		  			    <li class="nav-item dropdown">
 		  			    	<a class="nav-item nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><strong>Bienvenido: <?php echo $_SESSION['tpUs']?>

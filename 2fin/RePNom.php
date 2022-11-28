@@ -27,9 +27,11 @@
 			  				<li class="nav-item active dropdown">
 		  						<a class="nav-item nav-link active" href="indexfin.php" id="navbarDropdownMenuLink"><i class="fas fa-home"></i> <strong>Inicio</strong></a>
 			  				</li>
+		  			    <?php include "../menunoti.php"; ?>
+			  				
 			  				  <input type="hidden" id="matri" value="<?php echo $m?>">
 
-		  			    <?php include "../menunoti.php"; ?>
+		  			  
 		  			   
 
 		  			    <li class="nav-item dropdown">
@@ -105,7 +107,7 @@
 						<td><?php echo $data["Matricula"]; ?> </td>
 						<td><?php echo $data["Nombre"]; ?> </td>
 						<td><?php echo $data["Folio"]; ?> </td>
-						<td><?php $vr= date("d-m-Y", strtotime($data["Fecha"])); echo $vr; ?> </td>
+						<td><?php $vr= date("d-m-Y", strtotime($data["fecha"])); echo $vr; ?> </td>
 						<td><?php echo $data["Salario"]; ?> </td>
 						<td>
 							<a class="link_edit" href="" data-toggle="modal" data-target="#Editar"><i class="fas fa-edit"></i> <strong>Editar</strong></a>
@@ -125,7 +127,7 @@
 </body>
 </html>	
 
-	<script type="text/javascript">
+	<script type="text/javascript"> 
 		
 			$('#calcularNomina').click(function(){
 				var Matricula = document.getElementById('matricula').value;
